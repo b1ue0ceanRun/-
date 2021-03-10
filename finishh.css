@@ -1,0 +1,30 @@
+body{
+	position: relative;
+	background-color: #F5F5DC;
+}
+#boxxx1{
+    background-color: rgb(196, 210, 228);
+	height: 3px;
+	border: none;
+	margin-top: 40px;
+}
+#boxxx2{
+	position: absolute;
+	top: -75px;
+	color: rgb(78, 119, 173);
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #F5F5DC;
+	left: 70px;
+	padding: 7px;
+}
+#boxxx3{
+	position: absolute;
+	top:60px;
+	left: 80px;
+	color: rgb(78, 119, 173);
+	text-decoration: underline;
+}
+#boxxx3:hover{
+	color: black;
+}

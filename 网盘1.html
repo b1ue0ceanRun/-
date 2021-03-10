@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>小小网盘</title>
+		<link href="wangpan.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="checkuser">
+			<p id="box1">账号密码登录</p>
+			<p id="box2">账号:</p>
+			<input type="text" id="box2next" v-model="user" placeholder=" 用户名/手机号/邮箱" />
+			<p id="box3">密码:</p>
+			<input type="password" id="box3next" v-model="word" placeholder=" 密码"/>
+			<button id="check" v-on:click="canyou">登录</button>
+			<button id="forget" v-on:click="get">注册</button>
+			<button id="manage" v-on:click="getget">管理员登录</button>
+		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+			<script>
+				var re=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{9,15}$/; //密码
+				var re1=/[\u4E00-\u9FA5]{6,12}$/; //用户名全为中文
+				var re2=/[a-zA-Z]{6,12}$/;  //用户名全为英文
+				var v1=new Vue({
+					el:'#checkuser',
+                    data:{
+						user:'',
+						word:'',
+						flag:100
+					},
+					methods:{
+						get:function(){
+							window.location.href="get.html";
+						},
+						canyou:function(){
+							if(this.user==''||this.word=='')
+							{
+								alert("有消息漏填哦");
+							}
+							else{
+								if(re1.test(this.user)&&re.test(this.word)||re2.test(this.user)&&re.test(this.word))
+								{
+									axios({
+								url:'http://j6rtgoxs.dongtaiyuming.net/login',       //接口也没说
+								method:'post',  
+								withCredentials:true,//方法也没说
+								params:{
+									username:this.user,    //还不知道具体的名称
+									password:this.word
+								}
+							  }).then(res=>{
+								this.flag=res.status;
+								if(this.flag==200)
+								{
+									window.location.href="test2.html";
+								}
+								else{
+									"用户名与密码不配对";
+								}
+							  }).catch(err=>{
+								console.log(err);
+							  })
+								}
+								else
+								{
+									alert("信息填写格式错误");
+								}
+							}
+						    
+						},
+						getget:function(){
+							window.location.href="manager.html";
+						}
+					}
+				});
+			</script>
+	</body>
+</html>

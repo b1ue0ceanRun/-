@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上传文件的网页</title>
+		<link href="filee.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<label type="button" class="btn" id="btn">
+			<span>选择文档</span>
+			<input type="file" name="file" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf" @change="give($even)"/>
+		</label>
+		
+		<script>
+			var v=new Vue({
+				el:"#btn",
+				data(){
+					return{
+						filelist:[],
+						dialogvisible:false,
+						base:"",
+						files:''
+					};
+				},
+				methods:{
+					give(even){
+						event.preventDefault();
+						let file=event.target.files[0];
+						let formdata=new FormData();
+						formdata.append('file',files);
+						const instance=axios.create({
+							withCredentials:ture
+						})
+						instance.post('',formdata).then(res=>{
+							console.log(res);
+						})
+					}
+				}
+			})			
+		</script>
+
+	</body>
+</html>

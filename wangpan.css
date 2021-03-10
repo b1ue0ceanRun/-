@@ -1,0 +1,94 @@
+body{
+	background: url(images/QQ图片20210217141846.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+#checkuser{
+	position: absolute;
+	width: 427px;
+	height: 290px;
+	background-color: rgb(232,231,221);
+	left: 400px;
+	top: 180px;
+	border-radius: 15px 15px 15px 15px;
+}
+#box1{
+	padding-left: 23px;
+	color: rgb(124,104,93);
+	font-size: 25px;
+	font-weight: bold;
+}
+#box2{
+	padding-left: 23px;
+	color: rgb(124,104,93);
+	font-size: 20px;
+	font-weight: bold;
+}
+#box2next{
+	position: absolute;
+	left:85px;
+	height: 28px;
+	top:83px;
+	width:310px;
+	background-color: rgb(205,196,190);
+	outline: medium;
+	border: none;
+	font-size: 16px;
+}
+#box3{
+	padding-left: 23px;
+	color: rgb(124,104,93);
+	font-size: 20px;
+	font-weight: bold;
+}
+#box3next{
+	position: absolute;
+	left:85px;
+	height: 28px;
+	top:130px;
+	width:310px;
+	background-color: rgb(205,196,190);
+	outline: medium;
+	border: none;
+	font-size: 16px;
+}
+#check{
+	position: absolute;
+	left:24px;
+	border: none;
+	outline: none;
+	font-size: 22px;
+	font-weight: bold;
+	background-color:rgb(205,196,190);
+	color: rgb(124,104,93);
+	width: 375px;
+	top:190px;
+	height: 40px;
+}
+#check:hover{
+	color: ghostwhite;
+}
+#forget{
+	position: absolute;
+	left:15px;
+	top:235px;
+	background-color:rgb(232,231,221);
+	border: none;
+	outline: none;
+	color: rgb(124,104,93);
+}
+#forget:hover{
+	color: white;
+}
+#manage{
+	position: absolute;
+	left:325px;
+	top:235px;
+	background-color:rgb(232,231,221);
+	border: none;
+	outline: none;
+	color: rgb(124,104,93);
+}
+#manage:hover{
+	color: white;
+}

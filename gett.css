@@ -1,0 +1,123 @@
+body{
+	position: relative;
+	background-color: #F5F5DC;
+}
+#box1{
+    background-color: rgb(196, 210, 228);
+	height: 3px;
+	border: none;
+	margin-top: 40px;
+}
+#box2{
+	position: absolute;
+	top: -75px;
+	color: rgb(78, 119, 173);
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #F5F5DC;
+	left: 70px;
+	padding: 7px;
+}
+#name{
+	color: rgb(78, 119, 173);
+	position: absolute;
+	top: 60px;
+	left:40px;
+}
+#namee{
+	position: absolute;
+	top:73px;
+	left:100px;
+	width: 280px;
+	background-color: rgb(196, 210, 228);
+	border: none;
+	outline: medium;
+	height: 20px;
+	padding: 5px;
+	border-radius: 6px 6px 6px 6px;
+}
+#email{
+	color: rgb(78, 119, 173);
+	position: absolute;
+	top: 140px;
+	left:40px;
+}
+#emaill{
+	position: absolute;
+	top:153px;
+	left:100px;
+	width: 280px;
+	background-color: rgb(196, 210, 228);
+	border: none;
+	outline: medium;
+	height: 20px;
+	padding: 5px;
+	border-radius: 6px 6px 6px 6px;
+}
+#information{
+	position: absolute;
+	left:390px;
+	top: 80px;
+/* 	border: solid red; */
+	height: 400px;
+	width: 400px;
+}
+#box3{
+	position: absolute;
+	top: 255px;
+	background-color: #F5F5DC;
+	color: rgb(78, 119, 173);
+	font-size: 22px;
+	font-weight: bold;
+	left: 195px;
+	border-color: rgb(78, 119, 173);
+	outline: medium;
+	padding: 5px;
+	height: 60px;
+	width: 60px;
+	border-radius: 45px 45px 45px 45px;
+}
+#box3:hover{
+	color:white;
+}
+#image{
+	position: absolute;
+	left:150px;
+	top:21px;
+}
+#phone{
+	color: rgb(78, 119, 173);
+	position: absolute;
+	top: 100px;
+	left:40px;
+}
+#phonee{
+	position: absolute;
+	top:113px;
+	left:100px;
+	width: 280px;
+	background-color: rgb(196, 210, 228);
+	border: none;
+	outline: medium;
+	height: 20px;
+	padding: 5px;
+	border-radius: 6px 6px 6px 6px;
+}
+#password{
+	color: rgb(78, 119, 173);
+	position: absolute;
+	top: 180px;
+	left:40px;
+}
+#passwordd{
+	position: absolute;
+	top:193px;
+	left:100px;
+	width: 280px;
+	background-color: rgb(196, 210, 228);
+	border: none;
+	outline: medium;
+	height: 20px;
+	padding: 5px;
+	border-radius: 6px 6px 6px 6px;
+}

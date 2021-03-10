@@ -1,0 +1,92 @@
+body{
+	background-color: #F5F5DC;
+	position: relative;
+}
+#image2{
+	position: absolute;
+	left: 55px;
+	top: 300px;
+}
+#box1{
+	position: absolute;
+	left: 50px;
+	top: 120px;
+	color: rgb(86,120,98);
+	font-weight: bold;
+	font-size: 20px;
+	background-color:#F5F5DC ;
+	border: none;
+	outline: medium;
+}
+#box1:hover{
+	cursor:pointer;
+	color: rgb(158,194,174);
+}
+#box2{
+	position: absolute;
+	width: 113px;
+	height: 3px;
+	border: none;
+	background-color: rgb(86,120,98);
+	top:152px;
+	left: 35px;
+}
+#image3{
+	position: absolute;
+	left: 55px;
+	top: 210px;
+}
+#box3{
+	position: absolute;
+	left: 89px;
+	top: 210px;
+	color: rgb(86,120,98);
+	font-weight: bold;
+	font-size: 20px;
+	background-color:#F5F5DC ;
+	border: none;
+	outline: medium;
+	text-decoration: none;
+}
+#box3:hover{
+	cursor:pointer;
+	color: rgb(158,194,174);
+}
+#box4{
+	position: absolute;
+	width: 113px;
+	height: 3px;
+	border: none;
+	background-color: rgb(86,120,98);
+	top:242px;
+	left: 35px;
+}
+#haha{
+	position: absolute;
+	left: 180px;
+}
+#box5{
+	position: absolute;
+	left: 89px;
+	top: 300px;
+	color: rgb(86,120,98);
+	font-weight: bold;
+	font-size: 20px;
+	background-color:#F5F5DC ;
+	border: none;
+	outline: medium;
+	text-decoration: none;
+}
+#box5:hover{
+	cursor:pointer;
+	color: rgb(158,194,174);
+}
+#box6{
+	position: absolute;
+	width: 113px;
+	height: 3px;
+	border: none;
+	background-color: rgb(86,120,98);
+	top:332px;
+	left: 35px;
+}

@@ -1,0 +1,167 @@
+.btn{
+	position: relative;
+	width: 100px;
+	height: 25px;
+	padding: 5px;
+	text-align: center;
+	font-size: 13px;
+	vertical-align: center;
+	border: 1px solid rgb(86,120,98);
+	background-color: rgb(86,120,98);
+	color: ghostwhite;
+	border-radius: 5px 5px 5px 5px;
+	margin-left: 20px;
+	margin-top: 100px;
+}
+.btn input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+#btn2{
+	position: absolute;
+	top: -37px;
+	left:110px;
+	width: 60px;
+	height: 21px;
+	padding: 1.2px;
+	padding-top: 5px;
+	text-align: center;
+	font-size: 13px;
+/* 	vertical-align: center; */
+	border: 1px solid rgb(86,120,98);
+	background-color: rgb(86,120,98);
+	color: ghostwhite;
+	border-radius: 5px 5px 5px 5px;
+}
+#box1{
+	border: 1px solid #F5F5DC;
+	width: 20px;
+	height: 30px;
+}
+body{
+	background-color: #F5F5DC;
+}
+#button1{
+	position: relative;
+}
+#up{
+	position: absolute;
+	top: 459px;
+	left: 398px;
+}
+#down{
+	position: absolute;
+	top: 461.5px;
+	left:558px;
+}
+#page1{
+	color: rgb(25,75,41);
+	position: absolute;
+	top: 440px;
+	left:510px;
+	font-size: 25px;
+}
+#p1 {
+	    position: absolute;
+	    left:50px;
+	    top:37px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}
+#p1:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p2:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p3:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p4:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p5:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p6:hover{
+    transform: scale(1.1);
+    background-position: center;
+    box-shadow: 0px 0px 7px 7px rgb(221, 220, 220);
+    border-radius: 5px 5px 5px 5px;
+    z-index: 9999;
+}
+#p2 {
+	    position: absolute;
+	    left:388px;
+	    top:37px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}
+#p3 {
+	    position: absolute;
+	    left:725px;
+	    top:37px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}
+#p4 {
+	    position: absolute;
+	    left:50px;
+	    top:260px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}
+#p5 {
+	    position: absolute;
+	    left:388px;
+	    top:260px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}
+#p6 {
+	    position: absolute;
+	    left:725px;
+	    top:260px;
+	    cursor: pointer;
+/* 		border: 1 red solid; */
+        border: none;
+/* 		width: 240px;
+		height: 155px; */
+}

@@ -1,0 +1,81 @@
+body{
+	position: relative;
+	background-color: #F5F5DC;
+}
+#box1{
+    background-color: rgb(196, 210, 228);
+	height: 3px;
+	border: none;
+	margin-top: 40px;
+}
+#box2{
+	position: absolute;
+	top: -75px;
+	color: rgb(78, 119, 173);
+	font-size: 40px;
+	font-weight: bold;
+	background-color: #F5F5DC;
+	left: 70px;
+	padding: 7px;
+}
+#image{
+	position: absolute;
+	left:150px;
+	top:21px;
+}
+#manager{
+	position: absolute;
+	left: 400px;
+	top:180px;
+}
+#name{
+	position: absolute;
+	left: 520px;
+	top:166px ;
+	color:rgb(78, 119, 173) ;
+	font-size: 22px;
+	font-weight: bold;
+}
+#name2{
+	position: absolute;
+	left: 585px;
+	top: 190px;
+	background-color: rgb(196, 210, 228);
+    outline: none;
+	border: none;
+	width:200px;
+	height: 25px;
+}
+#password{
+	position: absolute;
+	left: 520px;
+	top:216px ;
+	color:rgb(78, 119, 173) ;
+	font-size: 22px;
+	font-weight: bold;
+}
+#password2{
+	position: absolute;
+	left: 585px;
+	top: 240px;
+	background-color: rgb(196, 210, 228);
+	outline: none;
+	border: none;
+	width:200px;
+	height: 25px;
+}
+#box3{
+	position: absolute;
+	top: 290px;
+	background-color: #F5F5DC;
+	color: rgb(78, 119, 173);
+	font-size: 22px;
+	font-weight: bold;
+	left: 580px;
+	border-color: rgb(78, 119, 173);
+	outline: medium;
+	padding: 5px;
+	height: 60px;
+	width: 60px;
+	border-radius: 45px 45px 45px 45px;
+}

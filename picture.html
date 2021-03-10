@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上传图片的网页</title>
+		<link href="picturee.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+	<div id="box1"></div>
+	<div>
+		<label type="button" class="btn" id="btn">
+		<span>选择图片</span>
+		<input type="file" name="file" accept="image/*" @change="give()"/>
+	</div>
+	<div id="button1" class="button1">
+		<img src="images/QQ图片20210308214100.png" width="75" id="up"/>
+		<p id="page1" v-text="page"></p>
+		<img src="images/QQ图片20210308214054.png" width="69" id="down" v-on:click="xia"/>
+		<img v-bind:src="before" id="p1" width="250"/>
+		<img v-bind:src="before2" id="p2" width="250"/>
+		<img v-bind:src="before3" id="p3" width="250"/>
+		<img v-bind:src="before4" id="p4" width="250"/>
+		<img v-bind:src="before5" id="p5" width="250"/>
+		<img v-bind:src="before6" id="p6" width="250"/>
+	</div>
+	
+	</label>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		// axios.defaults.withCredentials=true;
+		var v=new Vue({
+			el:"#btn",
+			data(){
+				return{
+					filelist:[],
+					dialogvisible:false,
+					base:""
+				};
+			},
+			methods:{
+				give(even){
+					event.preventDefault();
+				    let file=event.target.files[0];
+					console.log(file);
+					let formdata=new FormData();
+					formdata.append('files',file);
+					console.log(formdata.get('files'));
+				    axios.post('http://j6rtgoxs.dongtaiyuming.net/user/upload',formdata,{emulateJSON:true,withCredentials:true}
+					).then(res=>{
+				         if(res.data.msg=="上传成功")
+						 {
+							 alert("上传成功");
+						 }
+				    })
+					}
+			}
+		});
+		var v2= new Vue({
+			el:"#button1",
+			data:{
+				page:1,
+				number:1,
+				id:0,
+				before:'',
+				before2:'',
+				before3:'',
+				before4:'',
+				before5:'',
+				before6:''
+			},
+			methods:{
+				xia:function(){
+					axios({
+						url:'http://j6rtgoxs.dongtaiyuming.net/user/show',
+						methods:'get',
+						params:{
+							pageNum:this.page,
+							pageSize:this.number
+						},
+						withCredentials:true
+					}).then(res=>{
+						this.id=res.data.list[0].id;
+						this.next(this.id);
+					}).catch(err=>{
+						console.log(err);
+					})
+				},
+				next:function(a){
+					axios({
+						url:'http://j6rtgoxs.dongtaiyuming.net/user/download',
+						methods:'get',
+						params:{
+							id:a
+						},
+						withCredentials:true,
+						responseType:'arraybuffer'
+					}).then(response => {
+                        return 'data:image/png;base64,' + btoa(
+                        new Uint8Array(response.data).reduce((data, byte) => data + String.fromCharCode(byte), '')
+                        )
+                     }).then(data => {
+                        this.before = data;
+						console.log(this.before);
+                        })
+        
+				 }
+			}
+		});
+	</script>
+	</body>
+</html>

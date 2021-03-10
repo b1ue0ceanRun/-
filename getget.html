@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录页面</title>
+		<link href="getgett.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="up">
+			<img id="image" src="images/QQ图片20210222152155.png" width="135"/>
+		</div>
+		<div id="oper" class="oper">
+			<img src="images/QQ图片20210222191643.jpg" width="20" id="image3" />
+			<button id="box3">图片</button>
+			<hr id="box4"/>
+			<img src="images/QQ图片20210222193550.jpg" id="haha" width="40"/>
+			<p id="outout" v-on:click="out">注销</p>
+		</div>
+	</body>
+	
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script>
+		var v=new Vue({
+			el:'#oper',
+			methods:{
+				out:function(){
+					axios({
+						url:'http://j6rtgoxs.dongtaiyuming.net/logout',
+						methods:'get',
+						withCredentials:true
+					}).then(res=>{
+						if(res.data.msg=="注销成功！")
+						{
+							alert("您已注销");
+							window.top.location.href="网盘1.html";
+						}
+						console.log(res);
+					}).catch(err=>{
+						console.log(err);
+					})
+				}
+			}
+		});
+	</script>
+</html>

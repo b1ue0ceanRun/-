@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link href="gett.css" rel="stylesheet" type="text/css" />
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<hr id="box1" />
+		<p id="box2">欢迎注册</p>
+		<img id="image" src="images/QQ图片20210217220535.jpg" width="260"/>
+		<div id="information">
+			<p id="name">用户名:</p>
+			<input type="text" id="namee" placeholder="请设置用户名" title="请设置6~12位全中文或全英文的用户名" v-model="name" spellcheck="false"/>
+			<p id="phone">手机号:</p>
+			<input type="text" id="phonee" placeholder="请输入手机号" title="请输入11位手机号" v-model="phone" spellcheck="false"/>
+			<p id="email">邮&nbsp;&nbsp;&nbsp;&nbsp;箱:</p>
+			<input type="text" id="emaill" placeholder="请输入邮箱" title="请输入正确的邮箱" v-model="email" spellcheck="false"/>
+			<p id="password">密&nbsp;&nbsp;&nbsp;&nbsp;码:</p>
+			<input type="password" id="passwordd" placeholder="请设置登录密码" title="请设置9~15位含有小写英文字母,大写英文字母和数字的密码"v-model="word"/>
+			<button id="box3" v-on:click="getin">注册</button>
+		</div>
+		
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script>
+			var re=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{9,15}$/; //密码
+			var re1=/[\u4E00-\u9FA5]{6,12}$/; //用户名全为中文
+			var re2=/[a-zA-Z]{6,12}$/;  //用户名全为英文
+			var re3=/^1[34578]\d{9}$/;  //判断手机号码
+			var re4=/^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/; 
+			var v=new Vue({
+				el:'#information',
+                data:{
+				    name:'',
+					word:'',
+					phone:'',
+					email:''
+				},
+				methods:{
+					getin:function(){
+						if(this.word==''||this.name==''||this.phone==''||this.email=='')
+						{
+							alert("信息有漏填哦~");
+						}
+						else
+						{
+							if(re.test(this.word)&&re1.test(this.name)||re2.test(this.name)&&re3.test(this.phone)&&re4.test(this.email))
+							{
+							axios({
+							url:'http://j6rtgoxs.dongtaiyuming.net:80/Register',
+							method:'get',
+							withCredentials:true,
+							params:{
+								username:this.name,
+								password:this.word,
+								phone:this.phone,
+								email:this.email
+							}
+						}).then(res=>{
+							if(res.data.msg=="注册成功")
+							{
+								window.location.href="finish.html";
+							}
+							else
+							{
+								alert(res.data.msg);
+							}
+						}).catch(err=>{
+							console.log(err);
+						})	
+							}
+							else
+							{
+								alert("格式错误");
+							}
+						}
+
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
